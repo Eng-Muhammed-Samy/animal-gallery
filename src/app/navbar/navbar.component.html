@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" routerLink="/">
+            <span class="text-danger">A</span>nimals
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -10,21 +12,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page"
-                        href="#">Home</a>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1"
-                        aria-disabled="true">Contact Me</a>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="/contact me">Contact Me</a>
                 </li>
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search"
                     placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success"
+                <button class="btn btn-outline-light text-light"
                     type="submit">Search</button>
             </form>
         </div>
