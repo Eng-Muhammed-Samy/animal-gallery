@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WildAnimalsService } from '../../services/home/wildAnimalService/wild-animals.service';
-interface animal {
+import { homeService } from '../../services/home/home.service';
+interface animals {
   name: string;
   img: string;
   description: string;
@@ -12,8 +12,8 @@ interface animal {
   styleUrls: ['./wild-animals.component.css'],
 })
 export class WildAnimalsComponent implements OnInit {
-  cards: Array<animal>;
-  constructor(WildAnimalsService: WildAnimalsService) {
+  cards: Array<animals>;
+  constructor(WildAnimalsService: homeService) {
     this.cards = WildAnimalsService.gatAllAnimalInformation();
   }
 

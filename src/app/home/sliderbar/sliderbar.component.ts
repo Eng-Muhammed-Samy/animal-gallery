@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SliderbarService } from '../../services/home/sliderService/sliderbar.service';
+import { homeService } from 'src/app/services/home/home.service';
 @Component({
   selector: 'app-sliderbar',
   templateUrl: './sliderbar.component.html',
@@ -7,7 +7,7 @@ import { SliderbarService } from '../../services/home/sliderService/sliderbar.se
 })
 export class SliderbarComponent implements OnInit {
   images: Array<string>;
-  constructor(SliderbarService: SliderbarService) {
+  constructor(SliderbarService: homeService) {
     this.images = SliderbarService.getAllImage();
   }
 

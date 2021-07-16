@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WildBirdsService } from '../../services/home/wildBirdService/wild-birds.service';
+import { homeService } from 'src/app/services/home/home.service';
 interface bird {
   name: string;
   img: string;
@@ -12,7 +12,7 @@ interface bird {
 })
 export class WildBirdsComponent implements OnInit {
   birds: Array<bird>;
-  constructor(WildBirdsService: WildBirdsService) {
+  constructor(WildBirdsService: homeService) {
     this.birds = WildBirdsService.getAllBirdsInfo();
   }
 
