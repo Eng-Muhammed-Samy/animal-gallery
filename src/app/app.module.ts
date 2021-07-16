@@ -14,6 +14,8 @@ import { FooterComponent } from './home/footer/footer.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { CardComponent } from './home/card/card.component';
 import { homeService } from './services/home/home.service';
+import { TestComponent } from './home/test/test.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +29,9 @@ import { homeService } from './services/home/home.service';
     FooterComponent,
     SummaryPipe,
     CardComponent,
+    TestComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [homeService],
   bootstrap: [AppComponent],
 })

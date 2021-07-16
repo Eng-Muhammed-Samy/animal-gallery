@@ -20,3 +20,30 @@
 </div>
 
 <p>{{title | summary: 10}}</p> -->
+<app-test>
+    <ng-container class="head">this is my Header</ng-container>
+    <div class="body">this is my Body</div>
+</app-test>
+
+
+<!-- ngFor grouping -->
+<ul *ngFor='let people of peopleInformation'>
+    <li>{{people.country}}
+        <ul>
+            <li *ngFor="let name of people.names">
+                {{name}}
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+<input [(ngModel)]="value">
+<button class="btn btn-primary" (click)="addItem()">Add new Course</button>
+<button mat-raised-button color="primary">Primary</button>
+<ul>
+    <li *ngFor="let course of courses; let i = index">
+        <button (click)="removeItem(i)" class="btn btn-danger">Remove</button>
+        {{course}}
+    </li>
+</ul>

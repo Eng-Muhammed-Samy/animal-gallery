@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { homeService } from '../../services/home/home.service';
-interface animals {
-  name: string;
-  img: string;
-  description: string;
-}
+import { WildCard } from 'src/app/interfaces/wild-card';
 
 @Component({
   selector: 'app-wild-animals',
@@ -12,10 +8,24 @@ interface animals {
   styleUrls: ['./wild-animals.component.css'],
 })
 export class WildAnimalsComponent implements OnInit {
-  cards: Array<animals>;
+  name: string = '';
+  image: string = '';
+  description: string = '';
+
+  cards: Array<WildCard>;
   constructor(WildAnimalsService: homeService) {
     this.cards = WildAnimalsService.gatAllAnimalInformation();
   }
+  addNewAnimal() {
+    this.cards.push({
+      name: this.name,
+      img: this.image,
+      description: this.description,
+    });
+  }
 
+  removeAnimal(index: number) {
+    this.cards.splice(index, 1);
+  }
   ngOnInit(): void {}
 }

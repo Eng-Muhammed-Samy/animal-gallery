@@ -3,8 +3,48 @@
         <h2 class="h2 text-muted text-center">Wild Animals</h2>
         <span class="line"></span>
     </div>
-    <div *ngFor="let card of cards" class="col-sm-12 col-md-6 col-lg-4">
-        <app-card [name]="card.name" [image]='card.img'
-            [description]='card.description'></app-card>
+    <div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            Add New Animal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Add
+                            Animal
+                        </h5>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input class="form-control my-2" type="text"
+                            placeholder="Animal Name" [(ngModel)]="name">
+                        <input class="form-control" type="text"
+                            placeholder="Image URL" [(ngModel)]="image">
+                        <input class="form-control my-2" type="text"
+                            placeholder="Animal Description"
+                            [(ngModel)]="description">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary"
+                            (click)="addNewAnimal()">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let card of cards; let i = index"
+        class="col-sm-12 col-md-6 col-lg-4">
+        <app-card (delete)="removeAnimal(i)" [name]="card.name"
+            [image]='card.img' [description]='card.description'></app-card>
     </div>
 </div>
