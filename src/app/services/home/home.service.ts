@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Posster } from 'src/app/interfaces/posster';
 
 @Injectable({
   providedIn: 'root',
@@ -95,5 +96,14 @@ export class homeService {
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam et reprehenderit, ipsum earum mollitia dolore dolorem vero neque, provident, autem consectetur cumque voluptate pariatur sequi omnis porro iure qui harum.',
       },
     ];
+  }
+  getPosterInfo() {
+    return {
+      name: 'Tiger',
+      img: 'https://images03.nicepage.com/c461c07a441a5d220e8feb1a/de44a10994705aafb73ee97b/photo-1544979590-37e9b47eb705.jpg',
+      backrgoundImage:
+        'https://i.pinimg.com/originals/aa/37/42/aa37424d51ecdc1aa9a45a1a944c434e.jpg',
+      moreInfo: ['Animal', 'dangerous', 'Predatory', 'looks like cats'],
+    };
   }
 }

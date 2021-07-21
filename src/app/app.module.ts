@@ -16,6 +16,7 @@ import { CardComponent } from './home/card/card.component';
 import { homeService } from './services/home/home.service';
 import { TestComponent } from './home/test/test.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PosterComponent } from './home/poster/poster.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SummaryPipe,
     CardComponent,
     TestComponent,
+    PosterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [homeService],

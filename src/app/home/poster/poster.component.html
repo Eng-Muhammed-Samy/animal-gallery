@@ -1,0 +1,18 @@
+<div class="container1 my-5"
+    style='background-image: url({{poster.backrgoundImage}});'>
+    <div class="opac"></div>
+    <div class="row contain">
+        <div class="col-sm-12 col-md-6 col-lg-4 name">
+            <p>{{poster.name}}</p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 skew">
+            <img [src]="poster.img" alt="" />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 list">
+            <ul class="row">
+                <li *ngFor='let post of poster.moreInfo'
+                    class="col-sm-12 col-md-6">{{post}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

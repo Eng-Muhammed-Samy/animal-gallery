@@ -8,10 +8,3 @@
   margin: auto;
   margin-bottom: 50px;
 }
-.card img {
-  transform: scale(1);
-  transition: all 0.4s;
-}
-.card img:hover {
-  transform: scale(1.07);
-}

@@ -44,4 +44,9 @@ export class FooterComponent {
   removeItem(index: number) {
     this.courses.splice(index, 1);
   }
+  words = ['mohammed', 'Doaa', 'shimaa', 'hanaa'];
+  colored = false;
+  changeColor() {
+    this.colored = !this.colored;
+  }
 }
